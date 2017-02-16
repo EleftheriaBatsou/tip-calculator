@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript HTML5 Tip Calculator Application</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script type="text/javascript" src="script.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  <div id="title" class="text-center">
+    <h2>Tip Calculator</h2>
+    <h4>Fill the box and adjust the percentage</h4>
+    <h5>To re-use it, just change the values</h5>
+  </div>
+  
+  <div class="box">
+    <div class="calc">
+Enter the bill amount for your meal: $
+<input type="text" id="bill"><br>
+Tip Percentage: 
+      <!-- 
+      step="1" -> every time we slide the bar it will increament by one 
+      onchange -> fires on the js function, this.value is for the percentage and bill is for the amount of money
+      -->
+<input type="range" min="0" max="100" value="0" step="1" onchange="tipCalculate(this.value,'bill')" style="width:400px;">
+      <!-- js will update this number every time the tipCalculator runs -->
+<span id="slideval">0%</span>
+<h2>Tip to leave = <span id="tip"></span></h2>
+      
+      </div><!-- end of calc -->
+    </div><!-- end of box -->
+  
+  <div class="row text-center"> <!-- for footer -->
+      <h5><a href="http://www.eleftheriabatsou.com" target="_blank">Eleftheria Batsou</a> | <a href="http://codepen.io/EleftheriaBatsou" target="_blank">Projects</a></h5>
+    </div> <!-- end footer -->
+  
+</body>
+</html>
